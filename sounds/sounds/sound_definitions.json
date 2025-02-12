@@ -1,0 +1,118 @@
+{
+  "format_version" : "1.20.20",
+
+  "sound_definitions" : {
+    "sponge.absorb" : {
+       "__use_legacy_max_distance" : "true",
+       "category" : "block",
+       "max_distance" : null,
+       "min_distance" : null,
+       "sounds" : [
+        {
+           "load_on_low_memory" : true,
+           "name" : "sounds/dig/stone1"
+        },
+        "sounds/dig/stone2",
+        "sounds/dig/stone3",
+        "sounds/dig/stone4"
+       ]
+    },
+
+    "entity.generic.splash" : {
+      "__use_legacy_max_distance" : "true",
+      "category" : "player",
+      "max_distance" : null,
+      "min_distance" : null,
+      "sounds" : [
+         {
+            "load_on_low_memory" : true,
+            "name" : "sounds/random/splash"
+         }
+      ]
+    },
+
+    "block.bell.hit" : {
+       "__use_legacy_max_distance" : "true",
+       "category" : "block",
+       "max_distance" : null,
+       "min_distance" : null,
+       "sounds" : [
+        {
+          "name": "sounds/block/bell/bell_use01",
+          "pitch": 1,
+          "load_on_low_memory": true
+        },
+        {
+          "name": "sounds/block/bell/bell_use02",
+          "pitch": 1
+        }
+       ]
+    },
+
+    "random.doors" : {
+       "__use_legacy_max_distance" : "true",
+       "category" : "block",
+       "max_distance" : null,
+       "min_distance" : null,
+       "sounds" : [
+          {
+             "load_on_low_memory" : true,
+             "name" : "sounds/random/door_close",
+             "pitch" : 1.0,
+             "volume" : 0.40
+          },
+          {
+             "name" : "sounds/random/door_close",
+             "pitch" : 1.10,
+             "volume" : 0.40
+          },
+          {
+             "name" : "sounds/random/door_close",
+             "pitch" : 0.90,
+             "volume" : 0.40
+          },
+          {
+             "load_on_low_memory" : true,
+             "name" : "sounds/random/door_open",
+             "pitch" : 1.0,
+             "volume" : 0.40
+          },
+          {
+             "name" : "sounds/random/door_open",
+             "pitch" : 1.10,
+             "volume" : 0.40
+          },
+          {
+             "name" : "sounds/random/door_open",
+             "pitch" : 0.90,
+             "volume" : 0.40
+          }
+       ]
+    },
+    
+    "random.splash" : {
+       "__use_legacy_max_distance" : "true",
+       "category" : "player",
+       "max_distance" : null,
+       "min_distance" : null,
+       "sounds" : [
+          {
+             "load_on_low_memory" : true,
+             "name" : "sounds/random/splash"
+          }
+       ]
+    },
+    
+    "ambient.underwater.enter": {
+      "sounds": []
+    },
+  
+    "ambient.underwater.exit": {
+      "sounds": []
+    },
+
+    "hud.bubble.pop": {
+      "sounds": []
+    }
+  }
+}

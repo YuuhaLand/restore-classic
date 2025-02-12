@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "RestoreClassic: Sounds v1.0.3",
+    "description": "色々変わったサウンドをできる限り元に戻しました!!\nby YuuhaLand",
+    "uuid": "59f0a8da-1012-4272-a81e-9d2c5e3ea7ea",
+    "version": [ 1, 0, 3 ],
+    "min_engine_version": [ 1, 13, 0 ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "319e9c65-d260-4f1a-bf6b-2268b4f02732",
+      "version": [ 1, 0, 3 ]
+    }
+  ]
+}
