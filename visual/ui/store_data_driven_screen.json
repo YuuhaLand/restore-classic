@@ -1,0 +1,27 @@
+{
+  "namespace": "persona",
+
+  "character_creator_base_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  },
+
+  "character_creator_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  },
+
+  "dressing_room_color_picker_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  },
+
+  "expanded_appearance_view_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  },
+
+  "non_scrollable_sdl_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  },
+
+  "skin_selector_screen": {
+    "$screen_bg_content": "persona.persona_screen_background_content"
+  }
+}
