@@ -229,14 +229,5 @@
         }
       }
     ]
-  },
-  "main_buttons_stack_panel": {
-    "$title_offset_padding|default": [ "100%", "10%" ],
-    "variables": [
-      {
-        "requires": "($pocket_screen)",
-        "$title_offset_padding": [ "100%", "5%" ]
-      }
-    ]
   }
 }

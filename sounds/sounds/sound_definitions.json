@@ -102,6 +102,29 @@
           }
        ]
     },
+
+    "use.wood": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/step/wood1",
+        "sounds/step/wood2",
+        "sounds/step/wood3",
+        "sounds/step/wood4",
+        "sounds/step/wood5",
+        "sounds/step/wood6"
+      ]
+    },
+    "use.grass": {
+      "category": "neutral",
+      "sounds": [
+        "sounds/step/grass1",
+        "sounds/step/grass2",
+        "sounds/step/grass3",
+        "sounds/step/grass4",
+        "sounds/step/grass5",
+        "sounds/step/grass6"
+      ]
+    },
     
     "ambient.underwater.enter": {
       "sounds": []
