@@ -3,5 +3,154 @@
   
   "hotbar_slot_image": {
     "alpha": 0.65
+  },
+
+  "player_position": {
+    "type": "image",
+    "size": [ "100%c", "100%c" ],
+    "texture": "textures/ui/empty",
+    "controls": [
+      {
+        "back": {
+          "type": "image",
+          "size": [ "100%c + 6px", "100%c + 2px" ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.7,
+          "controls": [
+            {
+              "player_position_text": {
+                "type": "label",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+
+                "color": "$chat_text_color",
+                "text": "#text",
+                "shadow": true,
+
+                "bindings": [
+                  {
+                    "binding_name": "#player_position_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#player_position_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_text_background_alpha",
+        "binding_name_override": "#alpha"
+      }
+    ]
+  },
+
+  "number_of_days_played": {
+    "type": "image",
+    "size": [ "100%c", "100%c" ],
+    "texture": "textures/ui/empty",
+    "controls": [
+      {
+        "back": {
+          "type": "image",
+          "size": [ "100%c + 6px", "100%c + 2px" ],
+          "texture": "textures/ui/Black",
+          "alpha": 0.7,
+          "controls": [
+            {
+              "number_of_days_played_text": {
+                "type": "label",
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "layer": 1,
+              
+                "color": "$chat_text_color",
+                "text": "#text",
+                "shadow": true,
+              
+                "bindings": [
+                  {
+                    "binding_name": "#number_of_days_played_text",
+                    "binding_name_override": "#text",
+                    "binding_condition": "always_when_visible",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#number_of_days_played_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#hud_text_background_alpha",
+        "binding_name_override": "#alpha"
+      }
+    ]
+  },
+
+  "anim_item_name_background_alpha_in": {
+    "anim_type": "alpha",
+    "duration": 0,
+    "from": 0,
+    "to": 0.6,
+    "next": "@hud.anim_item_name_background_alpha_stay"
+  },
+
+  "anim_item_name_background_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 2,
+    "from": 0.6,
+    "to": 0
+  },
+
+  "anim_chat_bg_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_quart",
+    "destroy_at_end": "chat_grid_item",
+    "duration": 1,
+    "from": 0.7,
+    "to": 0
+  },
+
+  "hud_tip_text/item_text_label": {
+    "shadow": false
+  },
+
+  "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
+    "shadow": false
+  },
+
+  "anim_actionbar_text_background_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "in_expo",
+    "duration": 3,
+    "from": 0.6,
+    "to": 0,
+    "destroy_at_end": "hud_actionbar_text",
+    "end_event": "hud_actionbar_text_complete"
+  },
+
+  "chat_grid_item/chat_background": {
+    "alpha": 0.7
   }
 }
