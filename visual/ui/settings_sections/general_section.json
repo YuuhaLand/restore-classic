@@ -12,6 +12,14 @@
     }
   },
   
+  "sound_button": {
+    "$toggle_view_binding_name": "sound_button_toggle"
+  },
+
+  "sound_section_ore_ui": {
+    "ignored": true
+  },
+  
   "sound_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],

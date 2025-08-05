@@ -1,0 +1,184 @@
+{
+  "namespace": "world_section",
+
+  "selector_pane_content": {
+    "type": "stack_panel",
+
+    "$tts_section_header": "realmsSettingsScreen.worldSectionTitle",
+    "variables": {
+      "requires": "$is_pregame",
+      "$tts_section_header": "options.editSettings"
+    },
+    "controls": [
+      {
+        "world_snapshot_image": {
+          "ignored": "(not $is_pregame)",
+          "type": "panel",
+          "size": [ "100%", "100%c + 2px" ],
+          "controls": [
+            {
+              "thumbnail": {
+                "type": "image",
+                "force_texture_reload": true,
+                "size": [ "100% - 2px", "56.25%x + 2.25px" ],
+                "bilinear": true,
+                "layer": 2,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, 1 ],
+                "fill": true,
+                "controls": [
+                  {
+                    "border": {
+                      "type": "image",
+                      "size": [ "100% + 2px", "100% + 2px" ],
+                      "texture": "textures/ui/BannersTransparent",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "layer": 1
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#world_texture_name",
+                    "binding_name_override": "#texture"
+                  },
+                  {
+                    "binding_name": "#world_texture_locationtype",
+                    "binding_name_override": "#texture_file_system"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "play_or_create_panel@world_section.play_or_create_stack_bedrock": {
+          "ignored": "(not $is_pregame or $education_edition)",
+          "$button_text_max_size": [ "100%", 20 ]
+        }
+      },
+      {
+        "upload_world_panel@world_section.upload_world_stack_bedrock": {
+          "ignored": "(not $is_pregame or $education_edition)",
+          "$button_text_max_size": [ "100%", 20 ]
+        }
+      },
+      {
+        "play_or_host_panel@world_section.play_or_host_stack_edu": {}
+      },
+      {
+        "spacer": {
+          "type": "panel",
+          "size": [ 0, 8 ]
+        }
+      },
+      {
+        "server_settings_visibility_panel": {
+          "type": "stack_panel",
+          "bindings": [
+            {
+              "binding_name": "#server_settings_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+
+          "controls": [
+            {
+              "selector_group_label_0@settings_common.selector_group_label": {
+                "ignored": "($is_pregame)",
+                "text": "options.category.server"
+              }
+            },
+            {
+              "server_settings_button@world_section.server_settings_button": {
+                "ignored": "($is_pregame)",
+                "$toggle_group_forced_index": "$server_forced_index"
+              }
+            },
+            {
+              "server_spacer": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "selector_group_label_1@settings_common.selector_group_label": {
+          "text": "$tts_section_header"
+        }
+      },
+      {
+        "game_button@world_section.game_button": {
+          "ignored": "($nx_os)",
+          "$toggle_group_forced_index": "$game_forced_index"
+        }
+      },
+      {
+        "classroom_button@settings_common.section_toggle_base": {
+          "ignored": "($nx_os or not $education_edition)",
+          "$toggle_view_binding_name": "classroom_button_toggle",
+          "$toggle_group_forced_index": "$classroom_forced_index",
+          "$glyph_texture": "textures/ui/bookshelf_flat_border",
+          "$glyph_color_texture": "textures/ui/bookshelf_flat",
+          "$glyph_size": [ 21, 14 ],
+          "$button_text": "options.category.classroom_settings",
+          "$toggle_property_bag": {
+            "#panel_title": "createWorldScreen.classroom.settings"
+          }
+        }
+      },
+      {
+        "switch_game_button@world_section.game_button": {
+          "ignored": "(not $nx_os)",
+          "$toggle_group_forced_index": "$game_forced_index",
+          "$glyph_texture": "textures/ui/controller_glyph_switch",
+          "$glyph_color_texture": "textures/ui/controller_glyph_color_switch"
+        }
+      },
+      {
+        "multiplayer_button@world_section.multiplayer_button": {
+          "visible": "(not $education_edition)",
+          "$toggle_group_forced_index": "$multiplayer_forced_index"
+        }
+      },
+      {
+        "edu_cloud_button@world_section.edu_cloud_button": {
+          "ignored": "(not $education_edition or not $edu_save_to_cloud_on or not $edu_save_to_cloud_general_toggle_on or $is_multiplayer_client)",
+          "$toggle_group_forced_index": "$edu_cloud_level_forced_index"
+        }
+      },
+      {
+        "debug_button@world_section.debug_button": {
+          "ignored": "$is_publish"
+        }
+      }
+    ]
+  },
+
+  "addons_selector_panel": {
+    "type": "stack_panel",
+    "$tts_section_header": "options.category.addons",
+    "controls": [
+      {
+        "selector_group_label_2@settings_common.selector_group_label": {
+          "text": "$tts_section_header"
+        }
+      },
+      {
+        "level_texture_pack_button@world_section.level_texture_pack_button": {
+          "$toggle_group_forced_index": "$level_texture_pack_toggle_index"
+        }
+      },
+      {
+        "addon_button@world_section.addon_button": {
+          "$toggle_group_forced_index": "$addon_toggle_index"
+        }
+      }
+    ]
+  }
+}

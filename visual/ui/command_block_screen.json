@@ -1,6 +1,14 @@
 {
   "namespace": "command_block",
 
+  "right_scroll_panel_content/nearest_label": {
+    "ignored": true
+  },
+
+  "right_scroll_panel_content/nearest_label_offset": {
+    "ignored": true
+  },
+
   "command_block_screen": {
     "$screen_bg_content": "common.empty_panel"
   }
